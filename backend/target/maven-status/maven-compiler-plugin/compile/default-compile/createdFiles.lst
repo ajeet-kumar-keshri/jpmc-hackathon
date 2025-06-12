@@ -1,0 +1,11 @@
+com/jpmc/riskassets/repository/RiskAssetRepository.class
+com/jpmc/riskassets/controller/GrafanaProxyController.class
+com/jpmc/riskassets/model/RiskLevel.class
+com/jpmc/riskassets/controller/RiskAssetController.class
+com/jpmc/riskassets/controller/MetricsController.class
+com/jpmc/riskassets/model/RiskAsset.class
+com/jpmc/riskassets/model/RiskSummary.class
+com/jpmc/riskassets/config/OpenApiConfig.class
+com/jpmc/riskassets/RiskAssetsApplication.class
+com/jpmc/riskassets/service/RiskAssetService.class
+com/jpmc/riskassets/config/DataLoader.class

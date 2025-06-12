@@ -1,0 +1,11 @@
+/workspace/jpmc-hackathon/backend/src/main/java/com/jpmc/riskassets/service/RiskAssetService.java
+/workspace/jpmc-hackathon/backend/src/main/java/com/jpmc/riskassets/model/RiskAsset.java
+/workspace/jpmc-hackathon/backend/src/main/java/com/jpmc/riskassets/controller/MetricsController.java
+/workspace/jpmc-hackathon/backend/src/main/java/com/jpmc/riskassets/config/OpenApiConfig.java
+/workspace/jpmc-hackathon/backend/src/main/java/com/jpmc/riskassets/RiskAssetsApplication.java
+/workspace/jpmc-hackathon/backend/src/main/java/com/jpmc/riskassets/repository/RiskAssetRepository.java
+/workspace/jpmc-hackathon/backend/src/main/java/com/jpmc/riskassets/controller/GrafanaProxyController.java
+/workspace/jpmc-hackathon/backend/src/main/java/com/jpmc/riskassets/config/DataLoader.java
+/workspace/jpmc-hackathon/backend/src/main/java/com/jpmc/riskassets/controller/RiskAssetController.java
+/workspace/jpmc-hackathon/backend/src/main/java/com/jpmc/riskassets/model/RiskSummary.java
+/workspace/jpmc-hackathon/backend/src/main/java/com/jpmc/riskassets/model/RiskLevel.java
