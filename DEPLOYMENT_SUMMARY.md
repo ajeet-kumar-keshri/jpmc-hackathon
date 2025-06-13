@@ -57,7 +57,7 @@ A comprehensive Risk Asset Inventory Management system with React frontend, Spri
 **URL**: https://work-1-bnrdghebnjedwzfi.prod-runtime.all-hands.dev/grafana/
 **Login**: Automatically authenticated via proxy
 **Dashboard**: Risk Assets Performance Dashboard
-**Direct Dashboard URL**: https://work-1-bnrdghebnjedwzfi.prod-runtime.all-hands.dev/grafana/d/946cfc6f-f39b-4749-9892-9553f5cc6755/risk-assets-performance-dashboard
+**Direct Dashboard URL**: https://work-1-bnrdghebnjedwzfi.prod-runtime.all-hands.dev/grafana/d/9ba50a23-422f-4a39-a7f7-b1f400d00b7a/risk-assets-performance-dashboard
 
 #### Metrics Displayed:
 - HTTP Request Rate
