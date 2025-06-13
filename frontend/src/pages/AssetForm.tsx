@@ -5,7 +5,7 @@ import {
   TextField,
   Button,
   Paper,
-  Grid,
+
   Alert,
   CircularProgress,
   MenuItem,
@@ -151,8 +151,8 @@ const AssetForm: React.FC = () => {
 
       <Paper sx={{ p: 3 }}>
         <form onSubmit={handleSubmit}>
-          <Grid container spacing={3}>
-            <Grid item xs={12} md={6}>
+          <Box sx={{ display: "flex", flexWrap: "wrap", gap: 3 }}>
+            <Box sx={{ flex: "1 1 400px", minWidth: "400px" }}>
               <TextField
                 fullWidth
                 label="Asset Name"
@@ -160,9 +160,9 @@ const AssetForm: React.FC = () => {
                 onChange={handleInputChange('name')}
                 required
               />
-            </Grid>
+            </Box>
 
-            <Grid item xs={12} md={6}>
+            <Box sx={{ flex: "1 1 400px", minWidth: "400px" }}>
               <TextField
                 fullWidth
                 select
@@ -177,9 +177,9 @@ const AssetForm: React.FC = () => {
                   </MenuItem>
                 ))}
               </TextField>
-            </Grid>
+            </Box>
 
-            <Grid item xs={12}>
+            <Box sx={{ width: "100%" }}>
               <TextField
                 fullWidth
                 multiline
@@ -188,9 +188,9 @@ const AssetForm: React.FC = () => {
                 value={formData.description || ''}
                 onChange={handleInputChange('description')}
               />
-            </Grid>
+            </Box>
 
-            <Grid item xs={12} md={6}>
+            <Box sx={{ flex: "1 1 400px", minWidth: "400px" }}>
               <TextField
                 fullWidth
                 type="number"
@@ -200,9 +200,9 @@ const AssetForm: React.FC = () => {
                 required
                 inputProps={{ min: 0, step: 0.01 }}
               />
-            </Grid>
+            </Box>
 
-            <Grid item xs={12} md={6}>
+            <Box sx={{ flex: "1 1 400px", minWidth: "400px" }}>
               <TextField
                 fullWidth
                 type="number"
@@ -213,9 +213,9 @@ const AssetForm: React.FC = () => {
                 inputProps={{ min: 0, max: 100, step: 0.1 }}
                 helperText={`Risk Level: ${getRiskLevelFromScore(formData.riskScore || 0)}`}
               />
-            </Grid>
+            </Box>
 
-            <Grid item xs={12} md={6}>
+            <Box sx={{ flex: "1 1 400px", minWidth: "400px" }}>
               <TextField
                 fullWidth
                 label="Owner"
@@ -223,9 +223,9 @@ const AssetForm: React.FC = () => {
                 onChange={handleInputChange('owner')}
                 required
               />
-            </Grid>
+            </Box>
 
-            <Grid item xs={12} md={6}>
+            <Box sx={{ flex: "1 1 400px", minWidth: "400px" }}>
               <TextField
                 fullWidth
                 label="Location"
@@ -233,9 +233,9 @@ const AssetForm: React.FC = () => {
                 onChange={handleInputChange('location')}
                 required
               />
-            </Grid>
+            </Box>
 
-            <Grid item xs={12}>
+            <Box sx={{ width: "100%" }}>
               <Box display="flex" gap={2}>
                 <Button
                   type="submit"
@@ -251,8 +251,8 @@ const AssetForm: React.FC = () => {
                   Cancel
                 </Button>
               </Box>
-            </Grid>
-          </Grid>
+            </Box>
+          </Box>
         </form>
       </Paper>
     </Box>

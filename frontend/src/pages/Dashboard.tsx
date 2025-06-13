@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import {
-  Grid,
   Card,
   CardContent,
   Typography,
@@ -91,9 +90,9 @@ const Dashboard: React.FC = () => {
         Risk Asset Dashboard
       </Typography>
 
-      <Grid container spacing={3}>
+      <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 3, mb: 3 }}>
         {/* Summary Cards */}
-        <Grid item xs={12} sm={6} md={3}>
+        <Box sx={{ flex: '1 1 250px', minWidth: '250px' }}>
           <Card>
             <CardContent>
               <Typography color="textSecondary" gutterBottom>
@@ -104,9 +103,9 @@ const Dashboard: React.FC = () => {
               </Typography>
             </CardContent>
           </Card>
-        </Grid>
+        </Box>
 
-        <Grid item xs={12} sm={6} md={3}>
+        <Box sx={{ flex: "1 1 250px", minWidth: "250px" }}>
           <Card>
             <CardContent>
               <Typography color="textSecondary" gutterBottom>
@@ -117,9 +116,9 @@ const Dashboard: React.FC = () => {
               </Typography>
             </CardContent>
           </Card>
-        </Grid>
+        </Box>
 
-        <Grid item xs={12} sm={6} md={3}>
+        <Box sx={{ flex: "1 1 250px", minWidth: "250px" }}>
           <Card>
             <CardContent>
               <Typography color="textSecondary" gutterBottom>
@@ -130,9 +129,9 @@ const Dashboard: React.FC = () => {
               </Typography>
             </CardContent>
           </Card>
-        </Grid>
+        </Box>
 
-        <Grid item xs={12} sm={6} md={3}>
+        <Box sx={{ flex: "1 1 250px", minWidth: "250px" }}>
           <Card>
             <CardContent>
               <Typography color="textSecondary" gutterBottom>
@@ -143,10 +142,10 @@ const Dashboard: React.FC = () => {
               </Typography>
             </CardContent>
           </Card>
-        </Grid>
+        </Box>
 
         {/* Risk Distribution Chart */}
-        <Grid item xs={12} md={6}>
+        <Box sx={{ flex: "1 1 400px", minWidth: "400px" }}>
           <Card>
             <CardContent>
               <Typography variant="h6" gutterBottom>
@@ -173,10 +172,10 @@ const Dashboard: React.FC = () => {
               </ResponsiveContainer>
             </CardContent>
           </Card>
-        </Grid>
+        </Box>
 
         {/* Performance Metrics */}
-        <Grid item xs={12} md={6}>
+        <Box sx={{ flex: "1 1 400px", minWidth: "400px" }}>
           <Card>
             <CardContent>
               <Typography variant="h6" gutterBottom>
@@ -194,53 +193,53 @@ const Dashboard: React.FC = () => {
               </ResponsiveContainer>
             </CardContent>
           </Card>
-        </Grid>
+        </Box>
 
         {/* System Metrics */}
-        <Grid item xs={12}>
+        <Box sx={{ width: "100%" }}>
           <Card>
             <CardContent>
               <Typography variant="h6" gutterBottom>
                 System Metrics
               </Typography>
-              <Grid container spacing={2}>
-                <Grid item xs={12} sm={6} md={3}>
+              <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 2 }}>
+                <Box sx={{ flex: "1 1 250px", minWidth: "250px" }}>
                   <Typography variant="body2" color="textSecondary">
                     Response Time (avg)
                   </Typography>
                   <Typography variant="h6">
                     {metrics?.response_time_avg_ms || 0}ms
                   </Typography>
-                </Grid>
-                <Grid item xs={12} sm={6} md={3}>
+                </Box>
+                <Box sx={{ flex: "1 1 250px", minWidth: "250px" }}>
                   <Typography variant="body2" color="textSecondary">
                     Active Connections
                   </Typography>
                   <Typography variant="h6">
                     {metrics?.active_connections || 0}
                   </Typography>
-                </Grid>
-                <Grid item xs={12} sm={6} md={3}>
+                </Box>
+                <Box sx={{ flex: "1 1 250px", minWidth: "250px" }}>
                   <Typography variant="body2" color="textSecondary">
                     DB Connections
                   </Typography>
                   <Typography variant="h6">
                     {metrics?.database_connections || 0}
                   </Typography>
-                </Grid>
-                <Grid item xs={12} sm={6} md={3}>
+                </Box>
+                <Box sx={{ flex: "1 1 250px", minWidth: "250px" }}>
                   <Typography variant="body2" color="textSecondary">
                     Total API Requests
                   </Typography>
                   <Typography variant="h6">
                     {metrics?.api_requests_total?.toLocaleString() || 0}
                   </Typography>
-                </Grid>
-              </Grid>
+                </Box>
+              </Box>
             </CardContent>
           </Card>
-        </Grid>
-      </Grid>
+        </Box>
+      </Box>
     </Box>
   );
 };

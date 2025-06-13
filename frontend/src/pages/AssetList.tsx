@@ -113,7 +113,7 @@ const AssetList: React.FC = () => {
     }
   };
 
-  const uniqueTypes = [...new Set(assets.map(asset => asset.type))];
+  const uniqueTypes = Array.from(new Set(assets.map(asset => asset.type)));
 
   if (loading) {
     return (

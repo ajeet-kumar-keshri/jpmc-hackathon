@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import {
   Box,
   Typography,
-  Grid,
+
   Card,
   CardContent,
   CircularProgress,
@@ -134,9 +134,9 @@ const RiskAnalysis: React.FC = () => {
         Risk Analysis
       </Typography>
 
-      <Grid container spacing={3}>
+      <Box sx={{ display: "flex", flexWrap: "wrap", gap: 3 }}>
         {/* Risk by Asset Type */}
-        <Grid item xs={12} md={6}>
+        <Box sx={{ flex: "1 1 400px", minWidth: "400px" }}>
           <Card>
             <CardContent>
               <Typography variant="h6" gutterBottom>
@@ -154,10 +154,10 @@ const RiskAnalysis: React.FC = () => {
               </ResponsiveContainer>
             </CardContent>
           </Card>
-        </Grid>
+        </Box>
 
         {/* Risk by Location */}
-        <Grid item xs={12} md={6}>
+        <Box sx={{ flex: "1 1 400px", minWidth: "400px" }}>
           <Card>
             <CardContent>
               <Typography variant="h6" gutterBottom>
@@ -175,10 +175,10 @@ const RiskAnalysis: React.FC = () => {
               </ResponsiveContainer>
             </CardContent>
           </Card>
-        </Grid>
+        </Box>
 
         {/* Value vs Risk Scatter Plot */}
-        <Grid item xs={12}>
+        <Box sx={{ width: "100%" }}>
           <Card>
             <CardContent>
               <Typography variant="h6" gutterBottom>
@@ -207,10 +207,10 @@ const RiskAnalysis: React.FC = () => {
               </ResponsiveContainer>
             </CardContent>
           </Card>
-        </Grid>
+        </Box>
 
         {/* High Risk Assets Table */}
-        <Grid item xs={12}>
+        <Box sx={{ width: "100%" }}>
           <Card>
             <CardContent>
               <Typography variant="h6" gutterBottom>
@@ -252,53 +252,53 @@ const RiskAnalysis: React.FC = () => {
               </TableContainer>
             </CardContent>
           </Card>
-        </Grid>
+        </Box>
 
         {/* Summary Statistics */}
-        <Grid item xs={12}>
+        <Box sx={{ width: "100%" }}>
           <Card>
             <CardContent>
               <Typography variant="h6" gutterBottom>
                 Risk Analysis Summary
               </Typography>
-              <Grid container spacing={2}>
-                <Grid item xs={12} sm={6} md={3}>
+              <Box sx={{ display: "flex", flexWrap: "wrap", gap: 2 }}>
+                <Box sx={{ flex: "1 1 200px", minWidth: "200px" }}>
                   <Typography variant="body2" color="textSecondary">
                     Total High Risk Assets
                   </Typography>
                   <Typography variant="h6">
                     {assets.filter(a => a.riskLevel === RiskLevel.HIGH).length}
                   </Typography>
-                </Grid>
-                <Grid item xs={12} sm={6} md={3}>
+                </Box>
+                <Box sx={{ flex: "1 1 200px", minWidth: "200px" }}>
                   <Typography variant="body2" color="textSecondary">
                     Total Critical Risk Assets
                   </Typography>
                   <Typography variant="h6">
                     {assets.filter(a => a.riskLevel === RiskLevel.CRITICAL).length}
                   </Typography>
-                </Grid>
-                <Grid item xs={12} sm={6} md={3}>
+                </Box>
+                <Box sx={{ flex: "1 1 200px", minWidth: "200px" }}>
                   <Typography variant="body2" color="textSecondary">
                     Highest Risk Score
                   </Typography>
                   <Typography variant="h6">
                     {Math.max(...assets.map(a => a.riskScore)).toFixed(1)}
                   </Typography>
-                </Grid>
-                <Grid item xs={12} sm={6} md={3}>
+                </Box>
+                <Box sx={{ flex: "1 1 200px", minWidth: "200px" }}>
                   <Typography variant="body2" color="textSecondary">
                     Most Valuable High Risk Asset
                   </Typography>
                   <Typography variant="h6">
                     ${Math.max(...highRiskAssets.map(a => a.value)).toLocaleString()}
                   </Typography>
-                </Grid>
-              </Grid>
+                </Box>
+              </Box>
             </CardContent>
           </Card>
-        </Grid>
-      </Grid>
+        </Box>
+      </Box>
     </Box>
   );
 };
